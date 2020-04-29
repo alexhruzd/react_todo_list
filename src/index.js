@@ -1,30 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AppHeader from './components/AppHeader';
+import SearchBlock from './components/SearchBlock';
+import TodoList from './components/TodoList';
 
-const AppHeader = () => {
-  return <h1>Todo List</h1>
-};
-
-const SearchBlock = () => {
-  return <input placeholder='search' />;
-};
-
-const TodoList = () => {
+const App = () => {
   return (
-    <ul>
-      <li>Learn Js</li>
-      <li>Learn Reacy</li>
-    </ul>
+    <div>
+      <AppHeader />
+      <SearchBlock />
+      <TodoList />
+    </div>
   );
 };
 
-const el = (
-  <div>
-    <AppHeader />
-    <SearchBlock />
-    <TodoList />
-  </div>
-);
-
-ReactDOM.render(el, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
