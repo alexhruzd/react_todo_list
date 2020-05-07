@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppHeader from './components/AppHeader';
-import SearchBlock from './components/SearchBlock/SearchBlock';
-import TodoList from './components/TodoList/TodoList';
+import SearchBlock from './components/SearchBlock';
+import TodoList from './components/TodoList';
 
 const App = () => {
 
@@ -14,12 +14,12 @@ const App = () => {
     },
     {
       label: "Learn JS",
-      important: true, 
+      important: true,
       id: 2
     },
     {
       label: "Learn React",
-      important: false, 
+      important: false,
       id: 3
     }
   ];
@@ -28,7 +28,7 @@ const App = () => {
     <div>
       <AppHeader />
       <SearchBlock />
-      <TodoList todoItems = {todoData} />
+      <TodoList todoItems={todoData} />
     </div>
   );
 };
