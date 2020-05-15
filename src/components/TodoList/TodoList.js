@@ -2,7 +2,7 @@ import React from 'react';
 import TodoListItem from '../TodoListItem';
 import './TodoList.css';
 
-const TodoList = ({ todoItems, onDelete }) => {
+const TodoList = ({ todoItems, onDelete, onToggleDone, onToggleImportant }) => {
 
     const elements = todoItems.map((element) => {
 
@@ -13,6 +13,8 @@ const TodoList = ({ todoItems, onDelete }) => {
                 <TodoListItem
                     {...dataElement}
                     onDelete={() => onDelete(id)}
+                    onToggleDone={() => onToggleDone(id)}
+                    onToggleImportant={() => onToggleImportant(id)}
                 />
             </li >
         );
