@@ -3,3 +3,9 @@
     margin: 0 auto;
     padding: 2rem 0;
 }
+
+.search_panel {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
